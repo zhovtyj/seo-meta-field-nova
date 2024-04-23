@@ -90,7 +90,7 @@ class SeoSitemap {
     {
         $xml = '<?xml version="1.0" encoding="UTF-8"?>'.
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
-        $lastmod = Carbon::now()->format('Y-m-d H:i:s');
+        $lastmod = Carbon::now()->format('Y-m-d\TH:i:sP');
 
         foreach ($this->items as $item) {
             $use_lastmod = $this->use_lastmod ? ($item->lastmod ?? $lastmod) : null;
